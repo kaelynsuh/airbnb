@@ -46,6 +46,8 @@ gem 'omniauth-google-oauth2'
 
 gem 'font-awesome-sass'
 
+gem "paperclip"
+
 
 
 
