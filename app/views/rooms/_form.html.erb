@@ -5,7 +5,7 @@
   <div class="panel-body">
     <div class="container">
 
-      <%= form_for @room do |f| %>
+      <%= form_for @room, html: {multipart: true} do |f| %>
 
         <!-- Space -->
         <div class="row">
@@ -107,6 +107,21 @@
             </div>
           </div>
         </div>
+
+        <!-- Upload image -->
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <span class="btn btn-default btn-file">
+                <i class="fa fa-cloud-upload fa-lg"></i> Upload Photos
+                <%= file_field_tag "images[]", type :file, multiple: true %>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Display list of photo -->
+        <div id="photos"><%= render 'photos/list' %></div>
 
         <!-- Active -->
         <div class="row">
