@@ -38,7 +38,6 @@ class RoomsController < ApplicationController
     else
       redirect_to root_path, notice: "You don't have permission."
     end
-    @photo = @room.photos
   end
 
   def update
@@ -61,6 +60,6 @@ private
   end
 
   def room_params
-    params.requre(:room).permit(:home_type, :room_type, :accommodate, :bed_room, :bath_room, :listing_name, :summary, :address, :is_tv, :is_kitchen, :is_air, :is_heating, :is_internet, :price, :active)
+    params.require(:room).permit(:home_type, :room_type, :accommodate, :bed_room, :bath_room, :listing_name, :summary, :address, :is_tv, :is_kitchen, :is_air, :is_heating, :is_internet, :price, :active)
   end
 end
