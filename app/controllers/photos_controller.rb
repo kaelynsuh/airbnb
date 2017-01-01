@@ -1,6 +1,6 @@
 class PhotosController < ApplicationController
   def destroy
-    @photo = Photos.find(params[:id])
+    @photo = Photo.find(params[:id])
     room = @photo.room
 
     @photo.destroy
