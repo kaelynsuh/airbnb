@@ -48,6 +48,7 @@ gem 'font-awesome-sass'
 
 gem "paperclip"
 
+gem 'geocoder'
 
 
 
