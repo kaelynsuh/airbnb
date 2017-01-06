@@ -6,6 +6,7 @@
     <div class="container">
 
       <%= form_for @room, html: {multipart: true} do |f| %>
+        <%= render 'shared/devisemes', resource: @room %>
 
         <!-- Space -->
         <div class="row">

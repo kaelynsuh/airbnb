@@ -13,4 +13,6 @@ class Room < ApplicationRecord
   validates :listing_name, presence: true, length: {maximum: 50}
   validates :summary, presence: true, length: {maximum: 500}
   validates :address, presence: true
+  validates :price, numericality: { greater_than_or_equal_to: 0}
+
 end
